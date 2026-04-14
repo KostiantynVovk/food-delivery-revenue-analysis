@@ -1,5 +1,13 @@
 # 🍔 Food Delivery Revenue Analysis
 
+## 🚀 Key Results
+
+- Identified **$28,500 revenue leakage** driven by low-loyalty users  
+- Found **14–20 minute delivery delays** during rain and storm conditions  
+- Discovered that **discount campaigns increase cancellations** in Bronze segment  
+
+---
+
 ## 📌 Project Overview
 
 This project analyzes ~10,000 food delivery orders to identify **operational inefficiencies, revenue leakage, and customer behavior patterns**.
@@ -89,7 +97,8 @@ food-delivery-revenue-analysis/
 ## 🚀 Business Recommendations
 
 ### 1. Weather-aware operations
-- Adjust ETA dynamically based on weather
+- Adjust ETA dynamically based on precipitation levels (>2mm),
+increasing delivery estimates by ~10–15 minutes to reduce expectation gaps
 - Send proactive delay notifications
 
 ---
@@ -101,15 +110,14 @@ food-delivery-revenue-analysis/
 ---
 
 ### 3. Improve Bronze retention
-- Introduce incentives for completed orders
+- Introduce incentives for completed orders to move users from Bronze to Silver tier
 - Add friction before cancellation ("Are you sure?" prompts)
 
 ---
 
 ### 4. Rethink discount strategy
-- Reduce **Free Delivery campaigns**
-- Prioritize **Fixed Amount discounts**
-- Shift from upfront discounts → post-order rewards
+- Reduce free delivery campaigns and prioritize fixed-amount discounts,
+as they show lower cancellation rates
 
 ---
 
@@ -160,6 +168,18 @@ The main drivers of revenue loss are:
 - Inefficient discount strategy
 
 👉 Fixing these areas can significantly reduce cancellations and improve profitability.
+
+---
+
+## ⚙️ How to Reproduce
+
+1. Load `data/sample_data.csv` into PostgreSQL as table `food_delivery`
+2. Run SQL scripts in order:
+   - 01_weather_impact_analysis.sql
+   - 02_delivery_performance_gaps.sql
+   - 03_loyalty_tier_profitability.sql
+   - 04_marketing_efficiency.sql
+3. Compare results with provided insights and charts
 
 ---
 
