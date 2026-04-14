@@ -56,22 +56,24 @@ Reduce revenue loss by identifying:
 
 ## 📂 Project Structure
 
+```text
 food-delivery-revenue-analysis/
-│
-├── scripts/                     # SQL analysis scripts
+├── scripts/                          # SQL analysis scripts
 │   ├── 01_weather_impact_analysis.sql
 │   ├── 02_delivery_performance_gaps.sql
 │   ├── 03_loyalty_tier_profitability.sql
 │   └── 04_marketing_efficiency.sql
 │
-├── data/                        # Dataset or schema description
-│   └── dataset_description.md   # (or raw data if allowed)
+├── data/                             # Dataset description
+│   └── dataset_description.md
 │
-├── visuals/                     # Charts / dashboards (optional but powerful)
-│   └── (charts, screenshots)
+├── visuals/                          # Charts and screenshots
+│   ├── weather_cancellation.png
+│   ├── delivery_gap.png
+│   ├── loyalty_revenue_loss.png
+│   └── discount_impact.png
 │
-└── README.md                    # Project overview & insights
-
+└── README.md                         # Project overview and insights
 
 ---
 
@@ -88,28 +90,18 @@ food-delivery-revenue-analysis/
 ### 1. Weather-aware operations
 - Adjust ETA dynamically based on weather
 - Send proactive delay notifications
-![Weather Impact](visuals/weather_cancellation_rate.png)
-
-- Cancellation rate jumps to **12.07% during heavy storms**
-vs **7.99% in clear weather**
 
 ---
 
 ### 2. Fix delivery expectations
 - Increase estimated delivery time during bad weather
 - Reduce expectation gap → lower cancellations
-![Delivery Expectations](visuals/delivery_gaps.png)
-
-- Delivery delays increase by **~14 minutes in bad weather**
 
 ---
 
 ### 3. Improve Bronze retention
 - Introduce incentives for completed orders
 - Add friction before cancellation ("Are you sure?" prompts)
-![Loyalty Leakage](visuals/loyalty_leakage.png)
-
-- Bronze users generate the majority of revenue loss
 
 ---
 
@@ -117,10 +109,44 @@ vs **7.99% in clear weather**
 - Reduce **Free Delivery campaigns**
 - Prioritize **Fixed Amount discounts**
 - Shift from upfront discounts → post-order rewards
+
+---
+
+## 📈 Visual Insights
+
+### 1. Weather Impact on Cancellations
+
+![Weather Impact](visuals/weather_cancellation_rate.png)
+
+- Cancellation rate rises to **12.07%** during **Heavy Storm**
+- Compared to **7.99%** in **Clear Sky**
+
+---
+
+### 2. Delivery Delay Gap
+
+![Delivery Gap](visuals/delivery_gaps.png)
+
+- Delivery delay increases by **~14 minutes** during rain and storms
+- Clear Sky baseline delay is only **~4.5 minutes**
+
+---
+
+### 3. Revenue Loss by Loyalty Tier
+
+![Loyalty Revenue Loss](visuals/loyalty_leakage.png)
+
+- **Bronze** users generate the largest revenue leakage
+- This segment should be the main retention priority
+
+---
+
+### 4. Discount Type Impact on Cancellations
+
 ![Discount Impact](visuals/discount_analysis.png)
 
-- Free delivery → highest cancellation rate (**11.14%**)
-- Fixed discounts → lowest (**7.20%**)
+- **Free Delivery** shows the highest cancellation rate
+- **Fixed Amount** discounts perform best
 
 ---
 
