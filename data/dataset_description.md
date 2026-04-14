@@ -2,6 +2,10 @@
 
 This project uses a food delivery dataset with ~10,000 orders.
 
+## Sample Data
+
+A small sample dataset (`sample_data.csv`) is included for demonstration purposes.
+
 ## Main table: `food_delivery`
 
 Key fields used in the analysis:
