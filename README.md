@@ -74,6 +74,7 @@ food-delivery-revenue-analysis/
 │   └── discount_impact.png
 │
 └── README.md                         # Project overview and insights
+```
 
 ---
 
